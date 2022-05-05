@@ -19,13 +19,16 @@ public class Runner {
         activeEntities.forEach(entity -> {
             entity.moveY(PhysicsConstants.GRAVITY);
 
-
             entity.tick();
             entity.render(p);
             if (entity.getHp()<=0)  {
                 entity.kill();
             }
         });
+    }
+
+    public void checkCollision(Entity entity)   {
+
     }
 
     public void addEntity(Entity entity) {
